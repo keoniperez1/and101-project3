@@ -4,72 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#121212"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/challenge_one"
+    <TextView
+        android:id="@+id/app_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="🐕 Woofify"
+        android:textColor="#1DB954"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/hello_world"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/challenge_two"
+    <TextView
+        android:id="@+id/app_subtitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/challenge_one"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="Spotify for Dogs • Curated Calming Tracks"
+        android:textColor="#B3B3B3"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/sum_of_two_numbers"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_title" />
 
-    <Button
-        android:id="@+id/challenge_three"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/track_recycler_view"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/challenge_two"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/current_day_text"/>
-
-    <Button
-        android:id="@+id/challenge_four"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/challenge_three"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/random_color_text"/>
-
-    <Button
-        android:id="@+id/challenge_five"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/challenge_four"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/print_list_text"/>
-
-    <Button
-        android:id="@+id/challenge_six"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/challenge_five"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="20dp"
-        android:layout_margin="40dp"
-        android:text="@string/favorite_number_text"/>
+        app:layout_constraintTop_toBottomOf="@id/app_subtitle"
+        tools:listitem="@layout/item_dog_track" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
