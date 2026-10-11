@@ -30,7 +30,7 @@ The following STRETCH features are implemented:
 
 Here's a video demo of the app's implemented features:
 
-[Loom Video Demo](https://www.loom.com/share/d784af197125466aacb9880900273bd2)
+[Loom Video Demo] https://www.loom.com/share/95ca9b79204e4d2ca9e55ac99501e401
 
 ## Notes
 
