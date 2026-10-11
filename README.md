@@ -2,15 +2,15 @@
 
 # AND101 Project 2 - Kotlin Debug-a-thon
 
-Submitted by: **[Your Name Here]**
+Submitted by: **Keoni Perez Labrador**
 
 Time spent: **2** hours spent in total
 
 ## Summary
 
-**Android Kotlin Debugging** is an android app that was riddled with some pretty nasty Kotlin bugs. With those gone, it's a collection of widgets for a variety of purposes! The app features fixed navigation, accurate number summation, current day calculation, dynamic random background color changing, safe list iteration, and a working favorite number display.
+**Woofify (Spotify for Dogs)** is an android app that was riddled with some pretty nasty Kotlin bugs. With those gone, it's a collection of widgets and a Spotify-styled music app for dogs! Features include fixed navigation, 2+2 number summation, current day calculation, dynamic random background color changing, safe list iteration, favorite number display, and a full Spotify for Dogs player streaming calming audio with live dog album artwork.
 
-If I had to describe this project in three (3) emojis, they would be: 🐛 🛠️ ✨
+If I had to describe this project in three (3) emojis, they would be: 🐕 🎵 ✨
 
 ## Application Features
 
@@ -27,32 +27,26 @@ The following REQUIRED features are completed:
 
 The following STRETCH features are implemented:
 
-- [ ] None
+- [x] 🐕 Woofify - Spotify for Dogs with RecyclerView & AsyncHttpClient API data fetching
+- [x] 🎵 Audio Streaming player with MediaPlayer
 
 The following EXTRA features are implemented:
 
-- [ ] None
+- [x] Fallback offline handling for network resilience
 
 ## Video Demo
 
-Here's a video / GIF that demos all of the app's implemented features:
+Here's a video demo of the app's implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
-
-GIF created with **ScreenToGif**
-
-<!-- Recommended tools:
-- [Kap](https://getkap.co/) for macOS
-- [ScreenToGif](https://www.screentogif.com/) for Windows
-- [peek](https://github.com/phw/peek) for Linux. -->
+[Loom Video Demo](https://www.loom.com/share/d784af197125466aacb9880900273bd2)
 
 ## Notes
 
-During this project, I practiced identifying and resolving common Android Kotlin runtime exceptions, including ClassCastException, Resources.NotFoundException, StackOverflowError from infinite recursion, IndexOutOfBoundsException, and NullPointerException.
+During this project, I practiced identifying and resolving common Android Kotlin runtime exceptions, implementing RecyclerViews, fetching remote API data asynchronously, loading images with Glide, and streaming audio using MediaPlayer.
 
 ## License
 
-Copyright 2026 **[Your Name Here]**
+Copyright 2026 **Keoni Perez Labrador**
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
