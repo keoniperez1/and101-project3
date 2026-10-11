@@ -1,38 +1,30 @@
-<!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
-
-# AND101 Project 2 - Kotlin Debug-a-thon
+# AND101 Project 3 - Woofify (Spotify for Dogs)
 
 Submitted by: **Keoni Perez Labrador**
 
-Time spent: **2** hours spent in total
+Time spent: **3** hours spent in total
 
 ## Summary
 
-**Woofify (Spotify for Dogs)** is an android app that was riddled with some pretty nasty Kotlin bugs. With those gone, it's a collection of widgets and a Spotify-styled music app for dogs! Features include fixed navigation, 2+2 number summation, current day calculation, dynamic random background color changing, safe list iteration, favorite number display, and a full Spotify for Dogs player streaming calming audio with live dog album artwork.
+**Woofify (Spotify for Dogs)** is an Android app that features a curated Spotify-style music streaming experience tailored for dogs! Features include fetching live dog album artwork using the **Dog.ceo API** via **AsyncHttpClient**, loading artwork asynchronously with **Glide**, displaying tracks in a responsive **RecyclerView**, and streaming calming audio via **MediaPlayer** on a Now Playing detail screen.
 
 If I had to describe this project in three (3) emojis, they would be: 🐕 🎵 ✨
 
 ## Application Features
 
-<!-- (This is a comment) Please be sure to change the [ ] to [x] for any features you completed.  If a feature is not checked [x], you might miss the points for that item! -->
-
 The following REQUIRED features are completed:
 
-- [x] 👋 Debug and fix navigation to Hello World activity
-- [x] 4️⃣ Debug and fix Number Sum (2 + 2) activity
-- [x] 📅 Debug and fix Current Day activity 
-- [x] 🌈 Debug and fix behavior of Random Color activity
-- [x] 🗒️ Debug and fix Print List activity
-- [x] 💯 Debug and fix Favorite Number activity
+- [x] 🐕 Display a list of items using a `RecyclerView` with a `LinearLayoutManager`
+- [x] 🌐 Fetch data asynchronously from an API using `AsyncHttpClient`
+- [x] 📦 Parse API data into custom Kotlin Data Classes (`DogTrack`)
+- [x] 🎨 Load images asynchronously into list rows using `Glide`
+- [x] 📱 Custom `CardView` row layout (`item_dog_track.xml`)
 
 The following STRETCH features are implemented:
 
-- [x] 🐕 Woofify - Spotify for Dogs with RecyclerView & AsyncHttpClient API data fetching
-- [x] 🎵 Audio Streaming player with MediaPlayer
-
-The following EXTRA features are implemented:
-
-- [x] Fallback offline handling for network resilience
+- [x] 🎵 Tap on any track to open a **Now Playing Detail Screen** (`TrackDetailActivity`)
+- [x] ▶️ Live audio streaming and play/pause controls using Android's `MediaPlayer`
+- [x] 📡 Offline fallback data handling for network resilience
 
 ## Video Demo
 
@@ -42,7 +34,7 @@ Here's a video demo of the app's implemented features:
 
 ## Notes
 
-During this project, I practiced identifying and resolving common Android Kotlin runtime exceptions, implementing RecyclerViews, fetching remote API data asynchronously, loading images with Glide, and streaming audio using MediaPlayer.
+During this project, I learned and applied Android development concepts including RecyclerView Adapters, ViewHolder pattern, AsyncHttpClient networking, JSON parsing, Glide image caching, Intent data passing, and MediaPlayer audio streaming.
 
 ## License
 
