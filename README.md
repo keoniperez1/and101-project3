@@ -55,6 +55,12 @@ Here's a video demo showing the runnable app:
 
 ---
 
+## Woofify App Demo
+
+![Woofify App Demo](assets/woofify.gif)
+
+---
+
 ## License
 
 Copyright 2026 **Keoni Perez Labrador**
