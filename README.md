@@ -16,7 +16,7 @@ If I had to describe this project in three (3) emojis, they would be: 🐕 🎵 
 
 Below is the screenshot of the original **Spotify** app layout selected to duplicate into an Animal Version:
 
-![Original App Screenshot](https://raw.githubusercontent.com/keoniperez1/and101-project3/main/assets/spotify_original.png)
+<img src="assets/spotify_original.png" width="300" alt="Original App Screenshot" />
 
 *(Original app layout choice: Spotify Music Player)*
 
@@ -41,9 +41,9 @@ Below is the screenshot of the original **Spotify** app layout selected to dupli
 
 ## 🎨 Original App Layout (Second Screen)
 
-Below is the layout for the original player screen idea (`activity_track_detail.xml`):
+Below is the layout for the second screen layout (`IMG_6335`):
 
-![Original App Layout](https://raw.githubusercontent.com/keoniperez1/and101-project3/main/assets/woofify_player_layout.png)
+<img src="assets/woofify_player_layout.png" width="300" alt="Original App Layout" />
 
 ---
 
@@ -51,7 +51,7 @@ Below is the layout for the original player screen idea (`activity_track_detail.
 
 Here's a video demo showing the runnable app:
 
-[Loom Video Demo](https://www.loom.com/share/d784af197125466aacb9880900273bd2)
+[Loom Video Demo](https://www.loom.com/share/95ca9b79204e4d2ca9e55ac99501e401)
 
 ---
 
