@@ -1,4 +1,4 @@
-# AND101 Project 3 - Woofify (Spotify for Dogs)
+# AND101 Project - Woofify (Animal Version of Spotify)
 
 Submitted by: **Keoni Perez Labrador**
 
@@ -6,35 +6,54 @@ Time spent: **3** hours spent in total
 
 ## Summary
 
-**Woofify (Spotify for Dogs)** is an Android app that features a curated Spotify-style music streaming experience tailored for dogs! Features include fetching live dog album artwork using the **Dog.ceo API** via **AsyncHttpClient**, loading artwork asynchronously with **Glide**, displaying tracks in a responsive **RecyclerView**, and streaming calming audio via **MediaPlayer** on a Now Playing detail screen.
+**Woofify** is an Android app that reimagines **Spotify** as an "Animal Version" specifically designed for dogs! Features include curated calming tracks, live dog album artwork fetched from the **Dog.ceo API**, custom rounded button shapes, tooltips, custom font resources, and an interactive Now Playing player screen using **MediaPlayer**.
 
 If I had to describe this project in three (3) emojis, they would be: 🐕 🎵 ✨
 
+---
+
+## 📸 Original App Screenshot to Duplicate
+
+Below is the screenshot of the original **Spotify** app layout selected to duplicate into an Animal Version:
+
+![Original App Screenshot](https://raw.githubusercontent.com/keoniperez1/and101-project3/main/assets/spotify_original.png)
+
+*(Original app layout choice: Spotify Music Player)*
+
+---
+
 ## Application Features
 
-The following REQUIRED features are completed:
+### Required Features
+- [x] **Pick an app screenshot to duplicate**: Selected Spotify music player screenshot displayed above.
+- [x] **Create a runnable app displaying an Animal Version**: Built **Woofify (Spotify for Dogs)** with live dog album art and calming audio streams.
+- [x] **Layout uses one (1) or more ConstraintLayout**: Root layouts in `activity_main.xml`, `item_dog_track.xml`, and `activity_track_detail.xml` use `ConstraintLayout`.
+- [x] **Layout uses one (1) or more ImageView**: Album art displayed via `ImageView` (`track_image` and `detail_track_image`).
+- [x] **Layout uses three (3) or more TextViews**: Each row and detail view displays 3+ `TextView`s (Track Title, Artist/Playlist, Duration, Status).
 
-- [x] 🐕 Display a list of items using a `RecyclerView` with a `LinearLayoutManager`
-- [x] 🌐 Fetch data asynchronously from an API using `AsyncHttpClient`
-- [x] 📦 Parse API data into custom Kotlin Data Classes (`DogTrack`)
-- [x] 🎨 Load images asynchronously into list rows using `Glide`
-- [x] 📱 Custom `CardView` row layout (`item_dog_track.xml`)
+### Stretch Features
+- [x] **Create a custom-shape Button using Shape Drawables**: Implemented rounded button background in `res/drawable/rounded_button.xml`.
+- [x] **Customize text fonts by creating new Font Resources**: Added font resource in `res/font/custom_font.xml`.
+- [x] **Add Tooltips to Views**: Added `android:tooltipText` to buttons and image views for navigation guidance.
+- [x] **Create a second layout for an original app idea**: Created a "Now Playing Player" layout in `activity_track_detail.xml` shown below.
 
-The following STRETCH features are implemented:
+---
 
-- [x] 🎵 Tap on any track to open a **Now Playing Detail Screen** (`TrackDetailActivity`)
-- [x] ▶️ Live audio streaming and play/pause controls using Android's `MediaPlayer`
-- [x] 📡 Offline fallback data handling for network resilience
+## 🎨 Original App Layout (Second Screen)
 
-## Video Demo
+Below is the layout for the original player screen idea (`activity_track_detail.xml`):
 
-Here's a video demo of the app's implemented features:
+![Original App Layout](https://raw.githubusercontent.com/keoniperez1/and101-project3/main/assets/woofify_player_layout.png)
+
+---
+
+## 🎬 Video Demo
+
+Here's a video demo showing the runnable app:
 
 [Loom Video Demo](https://www.loom.com/share/d784af197125466aacb9880900273bd2)
 
-## Notes
-
-During this project, I learned and applied Android development concepts including RecyclerView Adapters, ViewHolder pattern, AsyncHttpClient networking, JSON parsing, Glide image caching, Intent data passing, and MediaPlayer audio streaming.
+---
 
 ## License
 
@@ -50,4 +69,4 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License
+limitations under the License.

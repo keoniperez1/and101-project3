@@ -82,14 +82,14 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_play_pause"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:backgroundTint="#1DB954"
-        android:text="Pause"
+        android:background="@drawable/rounded_button"
+        android:text="Pause Audio"
         android:textColor="#FFFFFF"
-        android:textSize="12sp"
-        app:cornerRadius="40dp"
+        android:textSize="14sp"
+        android:tooltipText="Tap to pause or resume audio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_status_text" />
