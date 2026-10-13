@@ -67,12 +67,12 @@ class TrackDetailActivity : AppCompatActivity() {
                     start()
                     this@TrackDetailActivity.isPlaying = true
                     statusText.text = "▶ Playing Audio for Pups"
-                    btnPlayPause.text = "Pause"
+                    btnPlayPause.text = "PA\nUS"
                 }
                 setOnCompletionListener {
                     this@TrackDetailActivity.isPlaying = false
                     statusText.text = "Finished Playing"
-                    btnPlayPause.text = "Play"
+                    btnPlayPause.text = "PLAY"
                 }
             }
         } catch (e: Exception) {
@@ -86,12 +86,12 @@ class TrackDetailActivity : AppCompatActivity() {
                 player.pause()
                 isPlaying = false
                 statusText.text = "⏸ Paused"
-                btnPlayPause.text = "Play"
+                btnPlayPause.text = "PLAY"
             } else {
                 player.start()
                 isPlaying = true
                 statusText.text = "▶ Playing Audio for Pups"
-                btnPlayPause.text = "Pause"
+                btnPlayPause.text = "PA\nUS"
             }
         }
     }

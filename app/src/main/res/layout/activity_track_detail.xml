@@ -4,28 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#121212"
-    android:padding="24dp">
+    android:background="#3A4224"
+    android:padding="20dp">
+
+    <!-- Top Bar -->
+    <ImageView
+        android:id="@+id/btn_collapse"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:contentDescription="Collapse"
+        android:src="@android:drawable/arrow_down_float"
+        android:tooltipText="Minimize player"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/btn_options"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/custom_font"
+        android:gravity="center"
+        android:text="•••"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:tooltipText="More options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/header_now_playing"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="🐕 NOW PLAYING FOR PUPS"
-        android:textColor="#B3B3B3"
-        android:textSize="12sp"
+        android:fontFamily="@font/custom_font"
+        android:gravity="center"
+        android:text="Playing recommended tracks for dogs"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/btn_collapse"
+        app:layout_constraintEnd_toStartOf="@id/btn_options"
+        app:layout_constraintStart_toEndOf="@id/btn_collapse"
+        app:layout_constraintTop_toTopOf="@id/btn_collapse" />
 
+    <!-- Album Art Card -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card_album_art"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
-        android:layout_marginTop="32dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header_now_playing">
@@ -34,64 +65,213 @@
             android:id="@+id/detail_track_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="Dog Album Art"
+            android:contentDescription="Dog Album Cover"
             android:scaleType="centerCrop"
             tools:src="@tools:sample/avatars" />
     </com.google.android.material.card.MaterialCardView>
 
     <TextView
+        android:id="@+id/btn_add_library"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#00000000"
+        android:fontFamily="@font/custom_font"
+        android:gravity="center"
+        android:text="➕"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:tooltipText="Add to Liked Songs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_album_art" />
+
+    <TextView
         android:id="@+id/detail_track_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
+        android:fontFamily="@font/custom_font"
         android:textColor="#FFFFFF"
         android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_library"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_album_art"
-        tools:text="Deep Sleep Rain for Pups" />
+        tools:text="Spring (Dog Lofi Mix)" />
 
     <TextView
         android:id="@+id/detail_track_artist"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/custom_font"
         android:textColor="#B3B3B3"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_library"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_track_title"
-        tools:text="Calming Golden Retriever Beats" />
+        tools:text="Saint Etienne for Pups" />
 
     <TextView
         android:id="@+id/detail_status_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/custom_font"
         android:textColor="#1DB954"
-        android:textSize="14sp"
+        android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_track_artist"
-        tools:text="▶ Playing Sound..." />
+        tools:text="▶ Playing Audio for Pups..." />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_play_pause"
-        android:layout_width="wrap_content"
+    <!-- Progress Seek Bar -->
+    <SeekBar
+        android:id="@+id/audio_progress"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_button"
-        android:text="Pause Audio"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:tooltipText="Tap to pause or resume audio"
+        android:layout_marginTop="12dp"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="#FFFFFF"
+        android:thumbTint="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/detail_status_text" />
+
+    <TextView
+        android:id="@+id/time_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_font"
+        android:text="0:18"
+        android:textColor="#B3B3B3"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_progress" />
+
+    <TextView
+        android:id="@+id/time_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/custom_font"
+        android:text="-3:25"
+        android:textColor="#B3B3B3"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio_progress" />
+
+    <!-- Controls Row -->
+    <LinearLayout
+        android:id="@+id/controls_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time_current">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/custom_font"
+            android:gravity="center"
+            android:text="🔀"
+            android:textSize="22sp"
+            android:tooltipText="Shuffle" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/custom_font"
+            android:gravity="center"
+            android:text="⏮"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:tooltipText="Previous track" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_play_pause"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/custom_font"
+            android:text="⏸"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:tooltipText="Play or Pause"
+            app:cornerRadius="32dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/custom_font"
+            android:gravity="center"
+            android:text="⏭"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            android:tooltipText="Next track" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/custom_font"
+            android:gravity="center"
+            android:text="🔁"
+            android:textSize="22sp"
+            android:tooltipText="Repeat" />
+    </LinearLayout>
+
+    <!-- Bottom Utility Row -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controls_row">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_font"
+            android:text="💻 Connect Device"
+            android:textColor="#B3B3B3"
+            android:textSize="12sp"
+            android:tooltipText="Connect device" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/custom_font"
+            android:text="📤"
+            android:textSize="18sp"
+            android:tooltipText="Share song" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/custom_font"
+            android:text="≡"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:tooltipText="View queue" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
